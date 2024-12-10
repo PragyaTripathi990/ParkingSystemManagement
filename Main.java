@@ -2,24 +2,19 @@ package parkingSystemManagement;
 
 public class Main {
     public static void main(String[] args) {
+        Driver driver = new Driver("Jatin", "Truck");
+        ParkingLot lot = new ParkingLot(6);
+        Vehicle car = new Car("RJ14 2007", "Jai");
+        Vehicle truck = new Truck("RJ14 9407", "Raj");
 
-        Driver drive = new Driver("Jatin", "Truck");
-        ParkingLot lot = new ParkingLot(6); 
-        Vechicle v1 = new Car("RJ14 2007", "Jai");
-        Vechicle v2 = new Truck("RJ14 9407", "Raj");
+        driver.enteredTheParkingLot();
+        car.parkCar(lot);
+        truck.parkCar(lot);
 
-
-        drive.enteredTheParkingLot();
-        
-        v1.parkCar(lot);
-        v2.parkCar(lot);
-        
         lot.viewSlots();
 
-       
-        v1.removeCar(lot);
-        v2.removeCar(lot);
-
-        drive.exitedTheParkingLot();
+        car.removeCar(lot);
+        truck.removeCar(lot);
+        driver.exitedTheParkingLot();
     }
 }

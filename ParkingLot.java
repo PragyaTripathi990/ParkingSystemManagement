@@ -42,7 +42,7 @@ public class ParkingLot {
                     }    
                 }
         }
-                    void parkTheCar() {
+                    public void parkTheCar() {
                         for (int i = 0; i < this.totalSlots; i++) {
                             if(!slots[i]) {
                                 slots[i] = true;
@@ -52,7 +52,7 @@ public class ParkingLot {
                         }   
                         System.out.println("No vacant slots available");
                     }
-                    void removeTheCar() {
+                    public void removeTheCar() {
                         System.out.println("Enter the slot number you want to remove (1 to " + totalSlots);
                         int remove = sc.nextInt();
                         if (remove >= 1 && remove <= totalSlots) {
@@ -66,7 +66,7 @@ public class ParkingLot {
                             System.out.println("Invalid slot number. Please enter a number between 1 and " + totalSlots);
                         }
                     }       
-                    void viewSlots() {
+                    public void viewSlots() {
                         for (int i = 0; i < this.totalSlots; i++) {
                            if (slots[i] == true) {
                               System.out.println("slot " + (i + 1) + ": occupied");

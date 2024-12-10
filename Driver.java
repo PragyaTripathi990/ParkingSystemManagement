@@ -13,4 +13,4 @@ public class Driver {
         void exitedTheParkingLot() {
             System.out.println("driver" + this.name + "has left with car " + this.vechileType);
         }
-}
+    }
